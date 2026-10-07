@@ -3,3 +3,6 @@ command = "npm run build"
 
 [build.environment]
 NODE_VERSION = "20"
+# "admin" is a non-sensitive username that also appears in route paths (/admin),
+# so exclude it from secrets scanning to avoid false positives.
+SECRETS_SCAN_OMIT_KEYS = "DMIN_USERNAME,ADMIN_USERNAME"
