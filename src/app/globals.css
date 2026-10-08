@@ -1,0 +1,53 @@
+:root{--yellow:#FBBF0F;--black:#111;--navy:#305496;--blue:#5B9BD5;--green:#C6E0B4;--bg:#f4f5f7;--card:#fff;--line:#e3e5e8;--red:#d93025;--ok:#1e8e3e}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:#1b1b1b}
+button,input,select{font:inherit}
+.topbar{background:var(--black);color:#fff;display:flex;align-items:center;gap:12px;padding:8px 16px;position:sticky;top:0;z-index:5}
+.topbar img{height:44px;width:44px;border-radius:50%}
+.topbar h1{font-size:1.05rem;margin:0;flex:1}
+.topbar h1 small{display:block;color:var(--yellow);font-weight:400;font-size:.75rem}
+.wrap{max-width:1100px;margin:0 auto;padding:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:16px}
+.card h2{margin:0 0 12px;font-size:1.05rem}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.tab{padding:10px 16px;border-radius:10px;border:2px solid var(--black);background:#fff;cursor:pointer;font-weight:600}
+.tab.active{background:var(--yellow)}
+.big{flex:1;min-width:200px;padding:22px;font-size:1.1rem}
+label{display:block;font-size:.8rem;font-weight:600;margin-bottom:4px;color:#444}
+input,select{width:100%;padding:10px;border:1px solid #c9ccd1;border-radius:8px;background:#fff}
+input:focus,select:focus{outline:2px solid var(--yellow);border-color:var(--black)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.btn{background:var(--yellow);color:#000;border:2px solid var(--black);padding:10px 18px;border-radius:10px;font-weight:700;cursor:pointer}
+.btn:disabled{opacity:.5}
+.btn.dark{background:var(--black);color:#fff}
+.btn.sm{padding:5px 10px;font-size:.8rem;border-radius:8px}
+.btn.red{background:#fff;color:var(--red);border-color:var(--red)}
+.msg{padding:10px 12px;border-radius:8px;margin:10px 0;font-size:.9rem}
+.msg.err{background:#fdecea;color:var(--red)}.msg.ok{background:#e6f4ea;color:var(--ok)}
+table.list{width:100%;border-collapse:collapse;font-size:.85rem}
+.scroll{overflow-x:auto}
+table.list th{background:var(--black);color:#fff;text-align:left;padding:8px;white-space:nowrap}
+table.list td{padding:8px;border-bottom:1px solid var(--line);vertical-align:top}
+.pill{display:inline-block;padding:2px 8px;border-radius:99px;font-size:.72rem;font-weight:700}
+.pill.cash{background:#fff3c4}.pill.online{background:#d6e8ff}
+.muted{color:#777;font-size:.85rem}
+/* Budget sheet (matches Excel layout) */
+.sheet{max-width:420px;border:1px solid #bbb;background:#fff;font-size:.95rem}
+.sheet .t{background:var(--navy);color:#fff;font-weight:700;padding:8px}
+.sheet .s{background:var(--blue);color:#fff;font-weight:600;padding:6px 8px;margin-top:10px}
+.sheet .meta{display:flex;justify-content:space-between;padding:4px 8px}
+.sheet .l{display:flex;justify-content:space-between;padding:4px 8px;border:1px solid #222;border-top:0}
+.sheet .l b+b,.sheet .l span:last-child{min-width:80px;text-align:right}
+.sheet .l.g span:last-child{background:var(--green)}
+.sheet .l.g{font-weight:700}
+.sheet .l.g span:last-child{padding:0 4px}
+.login{min-height:100vh;display:grid;place-items:center;background:var(--black);padding:16px}
+.login .box{background:#fff;border-radius:16px;padding:28px;width:100%;max-width:380px}
+.login img{width:120px;height:120px;border-radius:50%;display:block;margin:0 auto 12px}
+.login h1{text-align:center;font-size:1.2rem;margin:0 0 18px}
+.login .f{margin-bottom:12px}
+@media print{
+  .topbar,.noprint,.tabs{display:none!important}
+  body{background:#fff}.wrap{padding:0}.card{border:0;padding:0}
+}
